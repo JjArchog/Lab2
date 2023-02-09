@@ -8,9 +8,9 @@ if (!empty($Username)){
         if (!empty($feedback)){
 
                 $host = "localhost";
-                $dbusername = "root";
-                $dbpassword = "";
-                $dbname = "mydbwebprogmi211";
+                $dbusername = "webprogmi211";
+                $dbpassword = "webprogmi211";
+                $dbname = "webprogmi211";
 
 // CONNECTION HERE
 $conn = new mysqli($host, $dbusername, $dbpassword, $dbname);
@@ -19,7 +19,7 @@ if (mysqli_connect_error()){
     die('Connect Error (' . mysqli_connect_errno() . ') '
     . mysqli_connect_error());
 }else{
-    $sql = "INSERT INTO myguests (Username, email, feedback)
+    $sql = "INSERT INTO jbarchog_myguests (Username, email, feedback)
     values ('$Username', '$email', '$feedback')";
     if ($conn->query($sql)){
         echo "Your feedback has been submitted.";
